@@ -1,0 +1,28 @@
+.nheader {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: #df8383;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+nav {
+  display: flex;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  font-size: 1.2rem;
+  align-content: center;
+}
+nav ul li {
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+nav ul li a {
+  text-decoration: none;
+  color: whitesmoke;
+}

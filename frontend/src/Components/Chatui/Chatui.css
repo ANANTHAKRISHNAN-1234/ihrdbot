@@ -1,0 +1,9 @@
+.chat-container {
+  margin-top: 4.9rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 63vh;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
