@@ -1,20 +1,42 @@
 .nheader {
   font-family: Georgia, "Times New Roman", Times, serif;
-  background-color: #df8383;
+  background-color: #3b5b8a;
   position: fixed;
-  width: 100%;
+  width: 108%;
   top: 0;
+  left: 8;
+  display: flex;
+  flex-wrap: wrap;
+}
+.rem-header {
+  display: none;
 }
 nav {
   display: flex;
   align-items: center;
+  padding-left: 0;
+  margin-left: 0;
+  width: 100%;
+}
+#sidebar-active {
+  display: none;
+}
+.open-sidebar-btn {
+  display: none;
+}
+.close-sidebar-btn {
+  display: none;
+}
+nav svg {
+  fill: white;
 }
 nav ul {
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-around;
   font-size: 1.2rem;
   align-content: center;
+  margin-right: 2rem;
 }
 nav ul li {
   justify-content: space-between;
@@ -25,4 +47,108 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: whitesmoke;
+}
+nav ul h2 {
+  display: none;
+}
+.res-history {
+  display: none;
+}
+@media (max-width: 800px) {
+  nav ul h2 {
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid #dce2e9;
+  }
+  .site-name {
+    margin-left: 2rem;
+  }
+  #sidebar-active {
+    display: none;
+    margin-left: 27rem;
+  }
+  .open-sidebar-btn {
+    display: block;
+  }
+  .res-history {
+    height: 72%;
+    width: 85%;
+    border: 2px solid red;
+    display: flex;
+    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: -347px;
+    background-color: #7a8daa;
+    width: 300px;
+    z-index: 10;
+    color: black;
+    justify-content: space-around;
+    height: 100vh;
+    transition: left 0.5s ease-in-out;
+    margin-left: 2rem;
+    padding-left: 1rem;
+    margin-right: 0px;
+    cursor: pointer;
+  }
+  #sidebar-active:checked ~ ul {
+    left: -46px; /* Changed from -41px to 0 */
+  }
+  .open-sidebar-btn {
+    margin-left: 28.5rem;
+  }
+  #sidebar-active:checked ~ .close-sidebar-btn {
+    display: block;
+    margin-left: 28.5rem;
+  }
+  #sidebar-active:checked ~ .open-sidebar-btn {
+    display: none;
+  }
+
+  nav ul li a {
+    color: black;
+  }
+}
+@media (max-width: 649px) {
+  .open-sidebar-btn {
+    margin-left: 25rem;
+  }
+  #sidebar-active:checked ~ .close-sidebar-btn {
+    display: block;
+    margin-left: 25rem;
+  }
+  .site-name {
+    margin-left: 2rem;
+  }
+}
+@media (max-width: 537px) {
+  .open-sidebar-btn {
+    margin-left: 22rem;
+  }
+  #sidebar-active:checked ~ .close-sidebar-btn {
+    display: block;
+    margin-left: 22rem;
+  }
+  .site-name {
+    margin-left: 1rem;
+  }
+}
+@media (max-width: 472px) {
+  .open-sidebar-btn {
+    margin-left: 17rem;
+  }
+  #sidebar-active:checked ~ .close-sidebar-btn {
+    display: block;
+    margin-left: 17rem;
+  }
+  .site-name {
+    margin-left: 1rem;
+  }
 }
